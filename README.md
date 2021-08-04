@@ -8,7 +8,7 @@
 node src/server.js
 ```
 
-1. Request a Collatz sequence for a given seed value:
+2. Request a Collatz sequence for a given seed value:
 
 ```bash
 curl -i http://localhost:3000/collatz/33
