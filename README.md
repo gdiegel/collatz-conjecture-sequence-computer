@@ -1,6 +1,10 @@
 # Collatz conjecture sequence computer
 
-## Usage:
+## Background
+
+<https://en.wikipedia.org/wiki/Collatz_conjecture>
+
+## Usage
 
 1. Start the server:
 
