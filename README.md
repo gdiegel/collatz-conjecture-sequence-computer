@@ -1,4 +1,4 @@
-# Collatz conjecture sequence computer
+# Collatz sequence computer service
 
 ## Background
 
