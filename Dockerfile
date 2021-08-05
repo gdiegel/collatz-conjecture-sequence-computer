@@ -5,17 +5,15 @@ ENV PORT 1337
 ENV NODE_ENV production
 
 WORKDIR /usr/src/app
-
+RUN mkdir -p /usr/src/app
 COPY package*.json /usr/src/app
-
 RUN npm ci --only=production
+COPY . /usr/src/app/
 
 FROM node:14-alpine
 
 COPY --from=BUILD_IMAGE /usr/src/app/ /usr/src/app/
-
 WORKDIR /usr/src/app
-
 EXPOSE 8080
 
-CMD [ "node", "server.js" ]
+CMD [ "npm", "start" ]
