@@ -9,7 +9,7 @@
 1. Start the server:
 
 ```bash
-node src/server.js
+npm start
 ```
 
 2. Request a Collatz sequence for a given seed value:
