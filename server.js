@@ -31,6 +31,7 @@ app.get('/collatz/:seed', (req, res) => {
     console.log(`Seed: [${seed}]`)
     const sequence = computeSequence(seed)
     console.log(`Computed sequence: ${sequence}`)
+    res.set("Access-Control-Allow-Origin", "*")
     res.send(sequence)
 })
 
