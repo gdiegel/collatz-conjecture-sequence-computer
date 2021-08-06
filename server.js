@@ -23,6 +23,12 @@ function computeSequence(seed) {
 app.get('/collatz/:seed', (req, res) => {
     res.set("Access-Control-Allow-Origin", "*")
     const seed = parseInt(req.params.seed)
+    if (seed < 1) {
+        console.log(`Received negative seed value [${seed}`)
+        res.statusCode = 400
+        res.send("Seed value must be a positive integer (1,2,3...");
+        return
+    }
     if (isNaN(seed)) {
         console.log(`Error parsing [${seed}`)
         res.statusCode = 400
