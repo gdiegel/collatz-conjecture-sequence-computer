@@ -21,6 +21,7 @@ function computeSequence(seed) {
 }
 
 app.get('/collatz/:seed', (req, res) => {
+    console.log(JSON.stringify(req.headers));
     res.set("Access-Control-Allow-Origin", "*")
     const seed = parseInt(req.params.seed)
     console.log(`Parsed seed [${seed}`)
